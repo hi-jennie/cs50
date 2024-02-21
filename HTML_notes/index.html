@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        hello,title
+    </title>
+    <script>
+        //调用一个名为greet的function，在这个函数的内部写入一个alert属性，警示的内容是hello，Jennie
+        function greet() {
+            let name = document.querySelector('#name').value;
+            if (name === '') //在javascript中用三个=表示完全相同
+            {
+                name = 'world';
+            }
+            //.value其实是找到id名为name的这个元素以后，给我其中的value，无论我在该html字段中输入什么。
+            //document.queryselector表示在<script>内部查找任何一个ID名为name的元素。
+            //alert('hello,' + name + '!');
+            //将变量name用+链接在一起。
+            document.querySelector('#result').innerHTML = 'hello' + name + '!';
+            //innerHTML表示进入到，然后找到#result这个ID，将里面的内容（value）改为‘hello’+name+‘！’
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- form表单自带的一onsubmit属性，即提交时自动调用greet函数 -->
+    <form onsubmit="greet();return false;">
+        <input type="text" id="name">
+        <!-- id给了上面这个input一个name，所以可以调用他 其他时候也可创立ID，可以将其作为属性运用到页面中的任何html元素中-->
+        <input type="submit">
+    </form>
+    <div id="result">
+        hello!
+    </div>
+</body>
+
+</html>

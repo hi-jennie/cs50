@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        hello,title
+    </title>
+
+</head>
+
+<body>
+    <button id="red">R</button>
+    <button id="green">G</button>
+    <button id="blue">B</button>
+    <script>
+        document.querySelector('#red').onclick = function () {
+            document.querySelector('body').style.background = 'red';
+        }
+        //onclick表示点击id为red的button是，执行以上函数，虽然这个函数没有名字，但是没有影响，因为不用调用他。
+        document.querySelector('#green').onclick = function () {
+            document.querySelector('body').style.background = 'green';
+        }
+        document.querySelector('#blue').onclick = function () {
+            document.querySelector('body').style.background = 'blue';
+        }
+    </script>
+</body>
+
+</html>

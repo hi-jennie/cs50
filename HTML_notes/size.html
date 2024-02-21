@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        hello,title
+    </title>
+
+</head>
+
+<body>
+    <p>this is jennie's page</p>
+    <select>
+        <!-- select可以创建一个下拉表单，里面可以放很多选择 -->
+        <option value="large">large text</option>
+        <option value="initial" selected>medium text</option>
+        <!-- selected表示默认是这个值 -->
+        <option value="small">small text</option>
+    </select>
+    <script>
+        //按理来说queryselecter（）后面要跟的是id，但是整个html中只有一个select，就还好
+        document.querySelector('select').onchange = function () {
+            document.querySelector('p').style.fontSize = this.value;//this表示p的style自动跟随onchange触发的值。
+        }
+    </script>
+</body>
+
+</html>
